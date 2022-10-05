@@ -1,0 +1,15 @@
+extends default 
+
+block extrahead
+    a.buttonprimary(href="/student") Student List
+
+block content
+    form#newStudent(method="post") 
+        h3
+            label(for="fName") First Name:
+            input(type="text", name="fName", required) 
+            label(for="lName") Last Name: 
+            input(type="text", name="lName", required) 
+            input(type="checkbox", name="checkbox") 
+            label(for="check") checkbox 
+            input.inputbuttonprimary(type="submit", value="Create Student")

@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        title #{title}
+        link(rel="stylesheet", href="/public/styles/main.css")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+    body
+        div.main
+            block header
+                header
+                    table 
+                        tr 
+                            td(align="left", width="10%")
+                                img.qrcode(src="/public/images/logo.png")
+                            td
+                                h1 #{title}
+                            td(align="right", width="10%")
+                                block qrcode
+                        tr 
+                            td(colspan=3)
+                                h3 
+                                    block extrahead
+                                    if(unlock != true)
+                                        a.buttonprimary(href="/unlock/lock") Lock  
+            block content

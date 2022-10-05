@@ -1,0 +1,30 @@
+extends default 
+
+block extrahead
+    a#edit.buttonprimary(type="button", onClick = "editStudent();") Edit Student
+    a.buttonprimary(href="/student") Student List
+
+block qrcode
+    img.qrcode(src=`https://api.qrserver.com/v1/create-qr-code/?data=${student.url}&amp;size=200x200`)
+
+block content
+    script(src="/public/scripts/editStudent.js") 
+
+    form(method="post") 
+        fieldset#studentValues(disabled) 
+            input(type="hidden", name="id", value= `${student._id}`, required)
+            h3
+                label(for="fName") First Name: 
+                input(type="text", name="fName", value=`${student.fName}`, required)
+                br
+
+                label(for="lName") Last Name:
+                input(type="text", name="lName", value=`${student.lName}`, required) 
+                br
+
+                input(type="checkbox", name="checkbox", checked = student.checkbox) 
+                label(for="check") #{student.checkbox}
+
+            br
+            input#save.inputbuttonprimary(type="submit", value="Save", style="visibility: hidden;")
+

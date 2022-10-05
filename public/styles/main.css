@@ -1,0 +1,165 @@
+/* TODO: all the styles */
+
+* {
+    --black: #000000;
+    --yellow: #FFC100;
+    --white: #F6F6F6;
+    --darkgrey: #262626;
+    --red: #E25757;
+    --blue: #579FE2;
+    --darkred: #892828;
+    --darkblue: #1E578C;
+    --green: #16BB6C;
+}
+
+body {
+    margin: 0px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    background-color: var(--darkgrey);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-x: -moz-hidden-unscrollable;
+}
+
+header{
+    /* TODO: fix to top of the screen */
+    padding: 5px;
+    text-align: center;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+header table {
+    width: 100%;
+    border: 1px;
+    border-color: white;
+}
+
+.buttonprimary {
+    text-align: center;
+    margin: 5px;
+    padding: 10px;
+    color: var(--black);
+    text-decoration: none;
+    background-color: var(--yellow);
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+.buttonprimary:hover{
+    color: var(--white);
+    cursor: grab;
+}
+.buttonprimary:active{
+    color: var(--white);
+    cursor: grabbing;
+}
+
+.qrcode {
+    width: 6em;
+    height: auto;
+    margin: 5px;
+}
+
+.unlockform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 15px;
+    font-size: 1.2em;
+}
+
+.inputbuttonprimary {
+    text-align: center;
+    /* margin-left: 10px; */
+    padding: 10px;
+    color: var(--black);
+    background-color: var(--yellow);
+    border-radius: 5px;
+    border: 1px var(--darkgrey) solid;
+    font-size: 1.2em;
+    box-shadow: 2px 2px var(--black);
+}
+
+.inputbuttonprimary:active, .inputbuttonprimary:hover {
+    color: var(--white);
+    border: 1px var(--white) solid;
+}
+
+.textbox {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    width: 50%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 85%;
+}
+
+li {
+    margin-bottom: 25px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+#studentValues {
+    border: 0px;
+    margin: 0px;
+    padding: 10px;
+}
+
+input[type="text"]{
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    border: 0px;
+    padding: 6px;
+    margin: 2px;
+}
+input[type="text"]:enabled{
+    padding: 5px;
+    border: var(--darkgrey) 1px solid;
+    border-bottom: var(--yellow) 1px solid;
+}
+
+#studentValues input[type="text"]:enabled:hover, input[type="text"]:enabled:fullscreen{
+    padding: 4px;
+    border: var(--darkgrey) 2px solid;
+    border-bottom: var(--yellow) 2px solid;
+}
+
+input[type="checkbox"]{
+    border: solid 2px;
+    /* content: ''; */
+    height: 1.8rem;
+    width: 1.8rem;
+    line-height: 1.725rem;
+}
+
+#newStudent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+}

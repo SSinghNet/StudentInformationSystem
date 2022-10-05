@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+    head
+        title QR Codes
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css") 
+        style
+            include ../public/styles/qrcode.css
+    body 
+        div#main
+            each student in studentList
+                div#student.col-md-3.col-xs-6
+                    img.qrcodepdf(src=`https://api.qrserver.com/v1/create-qr-code/?data=${student.url}&amp;size=200x200`)
+                    h3 #{student.name}
+        

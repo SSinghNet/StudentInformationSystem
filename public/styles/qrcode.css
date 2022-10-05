@@ -1,0 +1,11 @@
+#student {
+    border: 1px solid #000000;
+    padding: 25px;
+    text-align: center;
+}
+
+@media (max-width: 320px) { 
+    #student {
+        width: 100%;
+    }
+}

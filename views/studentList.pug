@@ -1,0 +1,15 @@
+extends default 
+
+block extrahead
+    a.buttonprimary(href="/student/pdf", target="_blank") QR Codes Printable
+    a.buttonprimary(href="/student/new") New Student
+
+block content
+    h1 #{msg}
+    br
+    ul 
+        each student in studentList
+            a(href=student.url) 
+                li #{student.name}
+        else
+            li no students sorry
